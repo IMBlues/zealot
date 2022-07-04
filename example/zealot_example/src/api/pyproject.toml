@@ -1,0 +1,77 @@
+[tool.poetry]
+name = "zealot"
+version = "0.1.0"
+description = "My life for aiur!"
+authors = ["Blues Yu[CHANGE ME]"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+Django = "<4"
+djangorestframework = "^3.12.4"
+PyMySQL = "^1.0.2"
+drf-yasg = "^1.20.0"
+gunicorn = "^20.1.0"
+blue-krill = "^1.0.13"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+isort = "^5.10.1"
+pytest = "^7.1.0"
+pyproject-flake8 = "^0.0.1-alpha.2"
+mypy = "^0.941"
+django-stubs = "^1.9.0"
+pytest-django = "^4.5.2"
+types-setuptools = "^57.4.11"
+djangorestframework-stubs = "^1.4.0"
+types-requests = "^2.27.19"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 119
+skip-string-normalization = 'true'
+exclude = '''
+/(
+  | .+/node_modules
+)/
+'''
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = 'true'
+force_grid_wrap = 0
+use_parentheses = 'true'
+line_length = 119
+skip_glob = ["*/node_modules/**"]
+
+[tool.flake8]
+ignore = "C901,E203,W503,F405"
+max-line-length = 119
+max-complexity = 8
+format = "pylint"
+exclude = "*migrations*,*.pyc,.git,__pycache__"
+
+[tool.mypy]
+ignore_missing_imports = true
+show_error_codes = true
+plugins = ["mypy_django_plugin.main"]
+
+strict_optional = true
+
+[[tool.mypy.overrides]]
+module = [
+    "*.migrations.*",
+    "*.settings.*",
+]
+ignore_errors = true
+
+[tool.django-stubs]
+django_settings_module = "zealot.settings.overlays.dev"
+
+[tool.pytest.ini_options]
+addopts = "-p no:warnings"
+testpaths = ["zealot/tests"]
+DJANGO_SETTINGS_MODULE = "zealot.settings.overlays.dev"

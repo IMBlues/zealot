@@ -1,0 +1,28 @@
+{
+    "project_name": "zealot_example",
+    "api_name": "zealot",
+    "author": "Blues Yu[CHANGE ME]",
+    "description": "My life for aiur!",
+    "license": ["MIT", "BSD-3", "GNU GPL v3.0", "Apache Software License 2.0"],
+    "license_owner": "ZEALOT[CHANGE ME]",
+    "license_header": "\n",
+
+    "python_version": "~3.10",
+    "django_version": "<4",
+    "drf_version": "^3.12.4",
+    "node_version": "12.16.3",
+    "npm_version": "6.14.4",
+
+    "prefer_debian_registry": ["https://mirrors.cloud.tencent.com/debian"],
+    "prefer_pypi": ["https://mirrors.tencent.com/pypi/simple/", "https://mirrors.aliyun.com/pypi/simple/", "https://pypi.org/simple/"],
+    "prefer_docker_registry": ["mirrors.tencent.com"],
+    "prefer_npm_registry": ["https://mirrors.tencent.com/npm/"],
+
+    "local_dev_port": 8001,
+
+    "with_poetry_install": 1,
+    "with_build_image": 0,
+    "with_run_backend": 0,
+
+    "with_watermark": 1
+}
