@@ -20,7 +20,7 @@ cookiecutter gh:IMBlues/zealot -o PROJECT-PATH-YOU-WANT/
 ```
 我们支持较多的配置，可以自由选择想使用的模块，具体使用方法请参考 [Zealot 使用指南](docs/how_to_use_zealot.md)。
 
-项目生成后，可以通过 `PROJECT-PATH-YOU-WANT/README.md` 查看项目详情。你可以通过已经[示例](example/zealot_example/README.md)来了解更多。
+项目生成后，可以通过 `PROJECT-PATH-YOU-WANT/README.md` 查看项目详情，也可以通过 [示例项目](example/zealot_example/README.md) 来了解更多。
 
 
 ## 协议
