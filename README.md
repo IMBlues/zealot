@@ -14,6 +14,11 @@ Zealot 是一个面向 [DRF 框架](https://www.django-rest-framework.org/)的�
 
 ## 快速开始
 
+安装 `cookiecutter`（已安装可跳过）
+```shell
+pip install cookiecutter
+```
+
 生成新的项目
 ```shell
 cookiecutter gh:IMBlues/zealot -o PROJECT-PATH-YOU-WANT/
