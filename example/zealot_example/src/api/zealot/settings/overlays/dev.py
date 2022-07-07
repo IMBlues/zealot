@@ -1,4 +1,3 @@
-""""""
 from zealot.settings import env
 from zealot.settings.django import *  # noqa
 from zealot.settings.utils import *  # noqa

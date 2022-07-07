@@ -1,4 +1,3 @@
-""""""
 from blue_krill.web.drf_utils import inject_serializer
 from django.template import TemplateDoesNotExist
 from django.template.loader import get_template

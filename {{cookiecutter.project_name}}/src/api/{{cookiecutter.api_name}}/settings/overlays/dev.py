@@ -1,4 +1,7 @@
+{%- if cookiecutter.license_header -%}
 """{{cookiecutter.license_header}}"""
+
+{%- endif -%}
 from {{cookiecutter.api_name}}.settings import env
 from {{cookiecutter.api_name}}.settings.django import *  # noqa
 from {{cookiecutter.api_name}}.settings.utils import *  # noqa

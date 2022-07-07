@@ -1,4 +1,7 @@
+{%- if cookiecutter.license_header -%}
 """{{cookiecutter.license_header}}"""
+
+{%- endif -%}
 from blue_krill.web.std_error import ErrorCode
 
 

@@ -1,4 +1,7 @@
+{%- if cookiecutter.license_header -%}
 """{{cookiecutter.license_header}}"""
+
+{%- endif -%}
 import os
 from pathlib import Path
 

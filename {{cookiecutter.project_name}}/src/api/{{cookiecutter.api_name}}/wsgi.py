@@ -1,4 +1,7 @@
+{%- if cookiecutter.license_header -%}
 """{{cookiecutter.license_header}}"""
+
+{%- endif -%}
 import os
 
 from django.core.wsgi import get_wsgi_application
