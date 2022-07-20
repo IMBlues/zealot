@@ -1,15 +1,15 @@
-FROM node:16.16.0-stretch-slim AS StaticBuilding
-ENV NPM_VERSION 8.x
+FROM node:16.15-stretch-slim AS StaticBuilding
+ENV NPM_VERSION 8.14.0
 
 # install requirements & build
-COPY src/front /
+COPY src/ui /
 WORKDIR /
 
 RUN npm config set registry https://mirrors.tencent.com/npm/
 RUN npm i
 RUN npm run build
 
-FROM python:~3.10-slim-buster AS SaaSBuilding
+FROM python:3.10.5-slim-buster AS SaaSBuilding
 USER root
 
 RUN rm /etc/apt/sources.list && \
@@ -30,7 +30,6 @@ RUN pip install poetry==1.1.13
 
 WORKDIR /app
 COPY src/api/pyproject.toml /app
-COPY src/api/poetry.lock /app
 
 RUN poetry config virtualenvs.create false && poetry install --no-dev
 

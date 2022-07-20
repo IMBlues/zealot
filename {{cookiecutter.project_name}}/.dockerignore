@@ -125,7 +125,7 @@ site
 **/.pyre/
 
 # IDE related
-**/.vscode
+src/ui/.vscode
 **/.idea/
 
 # project related

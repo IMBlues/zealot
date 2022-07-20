@@ -26,6 +26,11 @@ types-setuptools = "^57.4.11"
 djangorestframework-stubs = "^1.4.0"
 types-requests = "^2.27.19"
 
+[[tool.poetry.source]]
+name = "default"
+url = "{{cookiecutter.prefer_pypi}}"
+default = true
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

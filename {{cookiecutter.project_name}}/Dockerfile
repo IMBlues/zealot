@@ -2,7 +2,7 @@ FROM node:{{cookiecutter.node_version}}-stretch-slim AS StaticBuilding
 ENV NPM_VERSION {{cookiecutter.npm_version}}
 
 # install requirements & build
-COPY src/front /
+COPY src/ui /
 WORKDIR /
 
 RUN npm config set registry {{cookiecutter.prefer_npm_registry}}
@@ -30,7 +30,6 @@ RUN pip install poetry==1.1.13
 
 WORKDIR /app
 COPY src/api/pyproject.toml /app
-COPY src/api/poetry.lock /app
 
 RUN poetry config virtualenvs.create false && poetry install --no-dev
 

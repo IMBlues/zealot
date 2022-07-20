@@ -1,17 +1,17 @@
 {
     "project_name": "zealot_example",
     "api_name": "zealot",
-    "author": "Blues Yu[CHANGE ME]",
+    "author": "Zealot <zealot@example.com>",
     "description": "My life for aiur!",
     "license": ["MIT", "BSD-3", "GNU GPL v3.0", "Apache Software License 2.0"],
     "license_owner": "ZEALOT[CHANGE ME]",
     "license_header": "",
 
-    "python_version": "~3.10",
+    "python_version": "3.10.5",
     "django_version": "<4",
     "drf_version": "^3.12.4",
-    "node_version": "16.16.0",
-    "npm_version": "8.x",
+    "node_version": "16.15",
+    "npm_version": "8.14.0",
     "mysql_version": "8.0.28-1.2.7-server",
 
     "prefer_debian_registry": ["https://mirrors.cloud.tencent.com/debian"],
