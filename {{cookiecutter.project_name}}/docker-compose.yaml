@@ -4,7 +4,7 @@ services:
         volumes:
             - ${STORAGE_ROOT}/mysql:/var/lib/mysql/
         environment:
-            MYSQL_DATABASE: {{cookiecutter.api_name}}
+            MYSQL_DATABASE: {{cookiecutter.project_name}}
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
             MYSQL_ROOT_HOST: '%'
         command: [
@@ -17,14 +17,14 @@ services:
     web:
         links:
             - "mysql"
-        image: ${REPO}/{{cookiecutter.api_name}}:${TAG}
+        image: ${REPO}/{{cookiecutter.project_name}}:${TAG}
         ports:
             - "${PORT}:${PORT}"
         environment:
             PORT: ${PORT}
             RUN_MIGRATE: 1
             # you may add your environment variables here
-            DB_NAME: {{cookiecutter.api_name}}
+            DB_NAME: {{cookiecutter.project_name}}
             DB_USER: root
             DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
             DB_HOST: mysql

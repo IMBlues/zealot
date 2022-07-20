@@ -4,7 +4,7 @@ services:
         volumes:
             - ${STORAGE_ROOT}/mysql:/var/lib/mysql/
         environment:
-            MYSQL_DATABASE: zealot
+            MYSQL_DATABASE: zealot_example
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
             MYSQL_ROOT_HOST: '%'
         command: [
@@ -17,14 +17,14 @@ services:
     web:
         links:
             - "mysql"
-        image: ${REPO}/zealot:${TAG}
+        image: ${REPO}/zealot_example:${TAG}
         ports:
             - "${PORT}:${PORT}"
         environment:
             PORT: ${PORT}
             RUN_MIGRATE: 1
             # you may add your environment variables here
-            DB_NAME: zealot
+            DB_NAME: zealot_example
             DB_USER: root
             DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
             DB_HOST: mysql
