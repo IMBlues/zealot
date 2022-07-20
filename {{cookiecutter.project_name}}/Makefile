@@ -30,7 +30,7 @@ run-frontend:
 
 run:
 	mkdir -p .services/
-	docker pull ${repo}/{{cookiecutter.project_name}}:${version}
+	# docker pull ${repo}/{{cookiecutter.project_name}}:${version}
 
 	STORAGE_ROOT=.services/ MYSQL_ROOT_PASSWORD=123456 REPO=${repo} TAG=${version} PORT=${listen_port}  \
 	docker-compose --env-file ${dev_env_file} -f docker-compose.yaml up -d
