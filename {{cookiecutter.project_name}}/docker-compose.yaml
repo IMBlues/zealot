@@ -1,0 +1,31 @@
+services:
+    mysql:
+        image: mysql/mysql-server:{{cookiecutter.mysql_version}}
+        volumes:
+            - ${STORAGE_ROOT}/mysql:/var/lib/mysql/
+        environment:
+            MYSQL_DATABASE: {{cookiecutter.api_name}}
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_ROOT_HOST: '%'
+        command: [
+            "mysqld",
+            "--character-set-server=utf8mb4",
+            "--collation-server=utf8mb4_unicode_ci"
+            ]
+        ports:
+            - "3306"
+    web:
+        links:
+            - "mysql"
+        image: ${REPO}/{{cookiecutter.api_name}}:${TAG}
+        ports:
+            - "${PORT}:${PORT}"
+        environment:
+            PORT: ${PORT}
+            RUN_MIGRATE: 1
+            # you may add your environment variables here
+            DB_NAME: {{cookiecutter.api_name}}
+            DB_USER: root
+            DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            DB_HOST: mysql
+            DB_PORT: 3306

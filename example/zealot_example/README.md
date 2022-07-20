@@ -12,4 +12,4 @@ My life for aiur!
 基于 MIT，详细请参考 [LICENSE](LICENSE)
 
 ---
-***powered by [zealot](https://github.com/IMBlues/zealot)*** ⚡️
+***created by [zealot](https://github.com/IMBlues/zealot)*** ⚡️

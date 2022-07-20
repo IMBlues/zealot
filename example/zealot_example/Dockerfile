@@ -1,5 +1,5 @@
-FROM node:12.16.3-stretch-slim AS StaticBuilding
-ENV NPM_VERSION 6.14.4
+FROM node:16.16.0-stretch-slim AS StaticBuilding
+ENV NPM_VERSION 8.x
 
 # install requirements & build
 COPY src/front /

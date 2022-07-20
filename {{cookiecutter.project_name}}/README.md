@@ -14,5 +14,5 @@
 {%- if cookiecutter.with_watermark|int == 1 %}
 
 ---
-***powered by [zealot](https://github.com/IMBlues/zealot)*** ⚡️
+***created by [zealot](https://github.com/IMBlues/zealot)*** ⚡️
 {% endif %}
