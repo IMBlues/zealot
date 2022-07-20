@@ -9,4 +9,4 @@
 
 ## 通过环境变量解耦
 当存在不同环境需要不同的配置时，更推荐使用环境变量来实现数据与结构的解耦。
-可以参看 [get_db_config 方法](src/)
+可以参看 [get_db_config 方法](../src/api/{{cookiecutter.api_name}}/settings/utils.py)
