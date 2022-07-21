@@ -5,7 +5,7 @@ platform ?= "linux/amd64,linux/arm64"
 listen_port ?= "8001"
 dev_env_file ?= "src/api/zealot/settings/.env"
 ui_dist_dir ?= "src/ui/dist/"
-compose_mysql_password ?= "123456"
+compose_mysql_password ?= ""
 with_pull ?= "0"
 
 build:
