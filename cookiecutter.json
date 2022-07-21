@@ -23,7 +23,7 @@
 
     "with_poetry_install": 1,
     "with_build_image": 0,
-    "with_run_backend": 0,
+    "with_run_api": 0,
 
     "with_watermark": 1
 }

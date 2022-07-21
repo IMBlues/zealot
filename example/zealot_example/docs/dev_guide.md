@@ -29,7 +29,7 @@ zealot_example
     │       │       ├── dev.py
     │       │       └── prod.py
     │       └── ...
-    └── front                             # 前端项目模块
+    └── ui                             # 前端项目模块
         └── package.json  
 ```
 
@@ -39,12 +39,12 @@ zealot_example
 
 ```shell
 # 首次运行需要运行 poetry install 安装依赖
-make run-backend
+make run-api
 ```
 
 ```shell
 # 首次运行需要运行 npm i 安装依赖
-make run-frontend
+make run-ui
 ```
 
 ### 方式二：本地构建镜像并拉起容器
