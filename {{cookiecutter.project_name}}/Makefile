@@ -43,9 +43,16 @@ run-ui:
 
 run:
 	mkdir -p .services/
-	if [ "$(with_pull)" == "1" ]; then \
-		docker pull ${repo}/{{cookiecutter.project_name}}:${version}
-	fi \
+
+	if [ ! -f ${dev_env_file} ]; \
+		then \
+			mv "src/api/{{cookiecutter.api_name}}/settings/env.example" ${dev_env_file}; \
+	fi
+
+	if [ "$(with_pull)" == "1" ]; \
+		then \
+			docker pull ${repo}/{{cookiecutter.project_name}}:${version}; \
+	fi
 
 	STORAGE_ROOT=.services/ MYSQL_ROOT_PASSWORD=x${compose_mysql_password} REPO=${repo} TAG=${version} PORT=${listen_port}  \
 	docker-compose --env-file ${dev_env_file} -f docker-compose.yaml up -d
