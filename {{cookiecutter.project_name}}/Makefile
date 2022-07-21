@@ -3,7 +3,7 @@ repo ?= "{{cookiecutter.prefer_docker_registry}}"
 version ?= "staging"
 platform ?= "linux/amd64,linux/arm64"
 listen_port ?= "{{cookiecutter.local_dev_port}}"
-dev_env_file ?= "src/api/{{cookiecutter.api_name}}/settings/.env"
+dev_env_file ?= "./src/api/{{cookiecutter.api_name}}/settings/.env"
 ui_dist_dir ?= "src/ui/dist/"
 compose_mysql_password ?= "{{cookiecutter.local_dev_db_password}}"
 with_pull ?= "0"
@@ -27,7 +27,7 @@ test:
 run-api:
 	if [ ! -f ${dev_env_file} ]; \
 		then \
-			mv "src/api/{{cookiecutter.api_name}}/settings/env.example" ${dev_env_file}; \
+			mv "./src/api/{{cookiecutter.api_name}}/settings/env.example" ${dev_env_file}; \
 	fi
 
 	if [ ! -e ${ui_dist_dir} ]; \
@@ -36,7 +36,8 @@ run-api:
 	fi
 
 	export DJANGO_SETTINGS_MODULE="{{cookiecutter.api_name}}.settings.overlays.dev" && \
-	cd src/api && poetry run python manage.py migrate && poetry run python manage.py runserver 0.0.0.0:${listen_port}
+	cd src/api && poetry install && poetry run python manage.py migrate && \
+		poetry run python manage.py runserver 0.0.0.0:${listen_port}
 
 run-ui:
 	cd src/ui && npm run dev
@@ -46,7 +47,7 @@ run:
 
 	if [ ! -f ${dev_env_file} ]; \
 		then \
-			mv "src/api/{{cookiecutter.api_name}}/settings/env.example" ${dev_env_file}; \
+			mv "./src/api/{{cookiecutter.api_name}}/settings/env.example" ${dev_env_file}; \
 	fi
 
 	if [ "$(with_pull)" == "1" ]; \
