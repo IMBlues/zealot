@@ -170,4 +170,5 @@ cython_debug/
 *.swp
 .DS_Store
 
-
+# test files
+.tests/

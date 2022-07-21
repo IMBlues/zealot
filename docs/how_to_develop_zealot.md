@@ -10,4 +10,10 @@
 make test
 ```
 
+在创建项目之后会尝试运行 `make run-api`，首次运行会尝试安装依赖。
+
+## 生成示例项目
+```shell
+make generate
+```
 将会在 `example/` 目录下生成示例项目，可以查看具体效果。
