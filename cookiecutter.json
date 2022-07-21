@@ -20,6 +20,11 @@
     "prefer_npm_registry": ["https://mirrors.tencent.com/npm/"],
 
     "local_dev_port": 8001,
+    "local_dev_db_user": "root",
+    "local_dev_db_host": "127.0.0.1",
+    "local_dev_db_port": "3306",
+    "local_dev_db_name": "{{cookiecutter.api_name}}",
+    "local_dev_db_password": "",
 
     "with_poetry_install": 1,
     "with_build_image": 0,
