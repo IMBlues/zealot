@@ -84,7 +84,7 @@ UI 模块 [NPM](https://www.npmjs.com/) 版本。
 
 当项目生成后，是否顺带构建镜像，懒人必备。
 
-### 【WIP】with_run_backend
+### 【WIP】with_run_api
 
 当项目生成后，是否顺带将后端以进程形式运行，同时会做 `poetry install` 操作，懒人必备。
 
