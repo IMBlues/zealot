@@ -5,7 +5,7 @@ platform ?= "linux/amd64,linux/arm64"
 listen_port ?= "8001"
 dev_env_file ?= "src/api/zealot/settings/.env"
 ui_dist_dir ?= "src/ui/dist/"
-compose_mysql_password ?= ""
+compose_mysql_password ?= "123456"
 with_pull ?= "0"
 
 build:
@@ -32,11 +32,11 @@ run-api:
 
 	if [ ! -e ${ui_dist_dir} ]; \
 		then \
-			cd src/ui && npm i && npm run build
+			cd src/ui && npm i && npm run build; \
 	fi
 
 	export DJANGO_SETTINGS_MODULE="zealot.settings.overlays.dev" && \
-	cd src/api && poetry run python manage.py runserver 0.0.0.0:${listen_port}
+	cd src/api && poetry run python manage.py migrate && poetry run python manage.py runserver 0.0.0.0:${listen_port}
 
 run-ui:
 	cd src/ui && npm run dev
