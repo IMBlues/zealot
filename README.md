@@ -1,5 +1,5 @@
 # Zealot - 偏执的 DRF 项目生成器
-Zealot 是一个面向 [DRF 框架](https://www.django-rest-framework.org/)的项目生成器。
+Zealot 是一个面向 [DRF 框架](https://www.django-rest-framework.org/) 的项目生成器。
 
 正如项目名描述，与其他通用型的生成器不同的是，它对某些依赖的选择是更偏执的，针对一些特定场景有着更好的规范定义作用。
 
@@ -21,7 +21,7 @@ pip install cookiecutter
 
 生成新的项目
 ```shell
-cookiecutter gh:IMBlues/zealot -o PROJECT-PATH-YOU-WANT/
+cookiecutter gh:IMBlues/zealot
 ```
 我们支持较多的配置，可以自由选择想使用的模块，具体使用方法请参考 [Zealot 配置指南](docs/how_to_configure_zealot.md)。
 
@@ -29,7 +29,7 @@ cookiecutter gh:IMBlues/zealot -o PROJECT-PATH-YOU-WANT/
 
 ## 参与开发
 
-Zealot 的开发和大多数 cookiecutter 项目一样简单，可以参考 [Zealot 开发指南了解更多](docs/how_to_develop_zealot.md) 。
+Zealot 的开发和大多数 cookiecutter 项目一样简单，可以参考 [Zealot 开发指南](docs/how_to_develop_zealot.md) 了解更多。
 
 
 ## 协议
