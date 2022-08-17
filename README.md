@@ -10,7 +10,7 @@ Zealot 是一个面向 [DRF 框架](https://www.django-rest-framework.org/) 的�
 - 天然支持容器镜像构建（包括前端！）
 - 支持通过 Docker Compose 构建全套运行环境
 
-**兼容 [一种还不错的 API 编写方案](example/zealot_example/docs/how_to_develop_api.md)，建议阅读。**
+**同时我们提供 [一种还不错的 API 编写方案](example/zealot_example/docs/how_to_develop_api.md)，建议阅读。**
 
 ## 快速开始
 
@@ -25,7 +25,7 @@ cookiecutter gh:IMBlues/zealot
 ```
 我们支持较多的配置，可以自由选择想使用的模块，具体使用方法请参考 [Zealot 配置指南](docs/how_to_configure_zealot.md)。
 
-项目生成后，可以通过 `PROJECT-PATH-YOU-WANT/README.md` 查看项目详情，也可以通过 [示例项目](example/zealot_example/README.md) 来了解更多。
+项目生成后，可以通过项目根路径下的 `README.md` 查看详情，也可以通过 [示例项目](example/zealot_example/README.md) 来了解更多。
 
 ## 参与开发
 
