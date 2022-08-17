@@ -6,11 +6,14 @@ Zealot 是一个面向 [DRF 框架](https://www.django-rest-framework.org/) 的�
 该项目以 [Cookiecutter](https://github.com/cookiecutter/cookiecutter) 为基础，特此感谢相关社区 ❤️ 。
 
 ## 特性
-- 支持前后端大仓开发
-- 天然支持容器镜像构建（包括前端！）
-- 支持通过 Docker Compose 构建全套运行环境
-
-**同时我们提供 [一种还不错的 API 编写方案](example/zealot_example/docs/how_to_develop_api.md)，建议阅读。**
+- 基于 [django-environ](https://github.com/joke2k/django-environ) 实现，满足[十二法则](https://12factor.net/) 的 settings 实现
+- 前后端大仓开发，默认附带 [VueJS](https://vuejs.org/) 示例项目
+- 支持 [Docker](https://www.docker.com/) 镜像一键构建（包括前端！）
+- 支持 [Gunicorn](https://gunicorn.org/) wsgi 项目启动最佳实践
+- 支持通过 [Docker Compose](https://docs.docker.com/compose/) 构建全套运行环境
+- 支持基于 [PEP-621](https://peps.python.org/pep-0621/) 的全工具链 *(mypy\isort\flake8\black)* 配置方案
+- 代码规范类 [pre-commit](https://pre-commit.com/) 整合
+- 支持 API 自动化文档，**建议阅读[指引](example/zealot_example/docs/how_to_develop_api.md)，了解更多**
 
 ## 快速开始
 
